@@ -1,0 +1,1223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+}
+
+
+
+/* navbar */
+nav {
+    background-color: rgb(9, 86, 168);
+    padding: 20px 20px;
+    height: 10%;
+    width: 100%;
+    color: rgb(207, 201, 189);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.dark-mode nav{
+    background-color: #0b0b4a;
+}
+.Dropdown-menu{
+    display: none;
+    top: 60px;
+    height: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #FFF 0.29%, rgb(11, 108, 201) 236.16%);
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  }
+  .Dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .Dropdown-menu.open{
+    width: 100%;
+    height: 200px;
+    display: none;
+    
+  }
+
+.sayt-logo{
+    width: 40px;
+    height: 40px;
+    margin-top: -6px;
+    margin-left: 30px;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+
+
+/* home */
+.container-home{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+hr{
+    display: none;
+}
+    
+.home-text-me{
+    font-weight: 450;
+    color: rgb(72, 67, 67);
+    font-size: 25px;
+}
+
+.img-me{
+    width: 400px;
+    height: 400px;
+    border-radius: 10% 20%;
+    border: 5px rgb(9, 86, 168) solid;
+    box-shadow: 5px 7px 15px rgb(67, 139, 215);
+}
+.left-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+/* about-me */
+
+.about{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-about-me{
+    margin-top: 100px;
+    display: flex;
+    background-color: rgb(11, 108, 211);
+    height: 630px;
+    justify-content: space-around;
+}
+
+
+.img-me-2{
+    width: 400px;
+    height: 400px;
+    border-radius: 22% 7%;
+    border: 5px rgb(255, 255, 255) solid;
+    margin-top: 100px;
+    box-shadow: 5px 7px 15px white; 
+}
+
+.left-about-me{
+    margin-left: 100px;
+    margin-top: 170px;
+    text-align: center;
+    padding: 50px 50px;
+    font-size: 18px;
+    color: white;
+}
+
+.right-about-me{
+    margin-left: 130px;
+}
+
+.mars-link{
+    color: rgb(251, 231, 231);
+    text-decoration: none;
+}
+
+/* skills */
+
+.container-skills{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 550px;
+}
+
+.my-skills-text{
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.card-skills{
+    width: 280px;
+    height: 350px;
+    padding: 20px 20px;
+    border: 1px rgb(11, 108, 211) solid;
+    border-radius: 5% 12%;
+    box-shadow: 7px 5px 15px rgb(71, 151, 188);
+    margin-bottom: 40px;
+    transition: 0.4s;
+    background-color: #ffffff;
+    color: #111;
+    text-align: left;
+}
+
+.dark-card-skills{
+    
+    border: 1px rgb(11, 108, 211) solid;
+    border-radius: 5% 12%;
+    box-shadow: 7px 5px 15px rgb(71, 151, 188);
+    margin-bottom: 40px;
+    transition: 0.4s;
+    background-color:white;
+    color: black;
+}
+
+.card-skills:hover, .dark-card-skills:hover{
+    width: 280px;
+    height: 350px;
+    border-radius: 1% 17%;
+    transition: 0.4s;
+}
+
+.card-text{
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+h5{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.card-img-top{
+    width: 100px;
+    height: 100px;
+}
+
+.img-html{
+    width: 90px;
+    height: 90px;
+}
+
+/* contact */
+
+.contact{
+    background-color: rgb(11, 108, 211);
+    padding: 20px 20px;
+    height: 630px;
+}
+
+.contact .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 430px;
+}
+
+.contact .content .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.contact .content .row .card{
+    background: #fff;
+    margin: 30px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius:10px;
+}
+
+.contact .content .row .card .contact-icon {
+    color: rgb(11, 108, 211);
+    font-size: 4em;
+    text-align: center;
+    transition: transform 0.5s ease ;
+}
+
+.contact .content .row .card:hover .contact-icon{
+    transform: translateY(-10px);
+}
+
+.contact .content .row .card .info{
+    text-align: center;
+}
+
+.contact .content .row .card .info h3{
+    color: #111;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.contact .content .row .card .info span{
+    color: #666;
+    font-weight: 500;
+}
+
+.section-title{
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/* Default Light Mode Styles */
+
+.dark-mode{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.dark-blue-mode {
+    background-color: #0b0b4a; 
+    color: white;
+}
+
+#darkModeToggle {
+    width: 40px;
+    height: 40px;
+    background: whitesmoke;
+    color: black;
+    padding: 5px 10px;
+    border: 1px var(--primary-color) solid;
+    box-shadow: 2px 3px 7px white;
+    cursor: pointer;
+    z-index: 9998;
+    border-radius: 25px;
+    transition: opacity 0.3s, transform 0.3s;
+    margin-left: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+}
+#darkModeToggle.show {
+    display: flex;
+    opacity: 1;
+}
+#darkModeToggle.hide {
+    opacity: 0;
+}
+    
+/* scrolltotop */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white; /* White button */
+    color: rgb(11, 108, 211); /* Blue arrow */
+    border: 2px solid rgb(11, 108, 211); /* Blue border */
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgb(11, 108, 211); /* Blue on hover */
+    color: white; /* White arrow on hover */
+}
+
+/* Show button when user scrolls */
+#scrollToTopBtn.show {
+    display: flex;
+    opacity: 1;
+}
+
+#scrollToTopBtn.hide {
+    opacity: 0;
+}
+
+
+/* preloader */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out; /* Плавное исчезновение */
+}
+
+/* Spinner Animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(11, 108, 211, 0.2); /* Faded blue border */
+    border-top-color: rgb(11, 108, 211); /* Solid blue top */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+/* responsive */
+
+@media(max-width:992px){
+    .Navbar nav,
+    .Navbar .Nav-button,
+    .Navbar-one{
+      display: none;
+    }
+    
+
+    
+    .Dropdown-menu{
+      border-radius: 0px;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+      margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    section{
+        height: 580px;
+    }   
+    .navbar-brand{
+        font-size: 30px;
+        margin-left: -25px;
+    }
+    .container-home {
+      flex-direction: row;
+      height: 500px;
+    }
+    .img-me{
+        width: 380px;
+        height: 380px;
+    }
+    .home-text-me{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+    }
+    .home-text{
+        font-size: 50px;
+    }
+    hr{
+        width: 400px;
+        margin: auto;
+    }
+
+    .container-about-me{
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .img-me-2{
+        width: 350px;
+        height: 350px;
+        margin-top: 0;
+        margin-right: 50px;
+    }
+    .left-about-me{
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+    .right-about-me{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        margin-bottom: -5px;
+        font-size: 35px;
+    }
+    .about-me-text{
+        font-size: 18px;
+        margin: 20px;
+    }
+    br{
+        display: none;
+    }
+    .card-skills{
+        width: 200px;
+        height: 300px;
+        font-size: 17px;
+        margin: 8px;
+        padding: 10px;
+    }
+    .card-img-top{
+        width: 90px;
+        height: 90px;
+    }
+    .card-text{
+        font-size: 12px;
+    }
+    #skills{
+        height: 530px;
+    }
+    .container-skills{
+        display: block;
+    }
+    .my-skills-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .row-contact{
+        align-items: center;
+        margin-top: -100px;
+    }
+    .card-skills:hover{
+        width: 200px;
+        height: 300px;
+    }
+    .col-6 {
+        max-width: calc(50% - 15px); 
+        padding: 10px;
+    }
+    .card{
+        height: 200px;
+        width: 205px;
+    }
+    .card span{
+        font-size: 15px;
+    }
+    .section-title{
+        margin: auto;
+    }
+    .contact{
+        height: 500px;
+    }
+    .content{
+        height: 490px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    section{
+        height: 480px;
+    }   
+    .navbar-brand{
+        font-size: 27px;
+        margin-left: -25px;
+    }
+    .container-home {
+      flex-direction: row;
+      height: 430px;
+    }
+    .img-me{
+        width: 350px;
+        height: 350px;
+    }
+    .home-text-me{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+    }
+    .home-text{
+        font-size: 40px;
+    }
+    hr{
+        width: 400px;
+        margin: auto;
+    }
+
+    .container-about-me{
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+        height: 400px;
+    }
+    .img-me-2{
+        display: none;
+    }
+    .left-about-me{
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        margin-bottom: -5px;
+        font-size: 35px;
+    }
+    .about-me-text{
+        font-size: 18px;
+        margin: 20px;
+    }
+    .right-about-me{
+        display: none;
+    }
+    br{
+        display: none;
+    }
+    .card-skills{
+        width: 170px;
+        height: 260px;
+        font-size: 15px;
+        margin: 8px;
+        padding: 10px;
+    }
+    .card-img-top{
+        width: 70px;
+        height: 70px;
+    }
+    .card-text{
+        font-size: 9px;
+    }
+    #skills{
+        height: 430px;
+    }
+    .container-skills{
+        display: block;
+    }
+    .my-skills-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .row-contact{
+        align-items: center;
+        margin-top: -200px;
+    }
+    .card-skills:hover{
+        width: 170px;
+        height: 260px;
+    }
+    .col-6 {
+        max-width: calc(50% - 15px); 
+        padding: 10px;
+    }
+    .card{
+        height: 180px;
+        width: 185px;
+    }
+    .card span{
+        font-size: 15px;
+    }
+    .section-title{
+        margin: auto;
+        margin-top: -20px;
+    }
+    .contact{
+        height: 400px;
+    }
+    .content{
+        height: 390px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section{
+        height: 680px;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        margin-left: -25px;
+    }
+    .container-home {
+      flex-direction: column;
+      height: 630px;
+    }
+    .img-me{
+        width: 300px;
+        height: 300px;
+    }
+    .left-home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .right-home{
+        margin-top: 37px;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    hr{
+        width: 400px;
+        margin: auto;
+    }
+
+    .container-about-me{
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+    }
+    .img-me-2{
+        display: none;
+    }
+    .left-about-me{
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        margin-bottom: -5px;
+        font-size: 35px;
+    }
+    .about-me-text{
+        font-size: 18px;
+        margin: 20px;
+    }
+    #About-me{
+        height: 450px;
+    }
+    .right-about-me{
+        display: none;
+    }
+    br{
+        display: none;
+    }
+    .card-skills{
+        width: 200px;
+        height: 270px;
+        font-size: 15px;
+        margin: 8px;
+        padding: 10px;
+        text-align: left;
+    }
+    .card-img-top{
+        width: 80px;
+        height: 80px;
+    }
+    .card-text{
+        font-size: 9px;
+    }
+    #skills{
+        height: 670px;
+    }
+    .my-skills-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .row-contact{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .card-skills:hover{
+        width: 200px;
+        height: 270px;
+    }
+    .col-6 {
+        max-width: calc(50% - 15px); 
+        padding: 10px;
+    }
+    .card{
+        height: 180px;
+        width: 230px;
+    }
+    .card span{
+        font-size: 17px;
+    }
+    .section-title{
+        margin: auto;
+        margin-top: -20px;
+        margin-bottom: 70px;
+    }
+    .contact{
+        height: 710px;
+    }
+    .row-contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section{
+        height: 680px;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        margin-left: -25px;
+    }
+    .container-home {
+      flex-direction: column;
+    }
+    .img-me{
+        width: 300px;
+        height: 300px;
+    }
+    .left-home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .right-home{
+        margin-top: 37px;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    hr{
+        width: 400px;
+        margin: auto;
+    }
+
+    .container-about-me{
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+    }
+    .img-me-2{
+        display: none;
+    }
+    .left-about-me{
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        margin-bottom: -5px;
+        font-size: 35px;
+    }
+    .about-me-text{
+        font-size: 18px;
+        margin: 20px;
+    }
+    #About-me{
+        height: 450px;
+    }
+    .right-about-me{
+        display: none;
+    }
+    br{
+        display: none;
+    }
+    .card-skills{
+        width: 150px;
+        height: 250px;
+        font-size: 15px;
+        margin: 8px;
+        padding: 10px;
+    }
+    .card-img-top{
+        width: 50px;
+        height: 50px;
+    }
+    .card-text{
+        font-size: 9px;
+    }
+    #skills{
+        height: 630px;
+    }
+    .conrainer-sills{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .my-skills-text{
+        margin: 10px auto;
+        margin-top: -70px;
+        margin-bottom: 15px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .card-skills:hover{
+        width: 150px;
+        height: 250px;
+    }
+    .col-6 {
+        max-width: calc(50% - 15px); 
+        padding: 10px;
+    }
+    .card{
+        height: 180px;
+        width: 155px;
+    }
+    .card span{
+        font-size: 12px;
+    }
+    .section-title{
+        margin: auto;
+        margin-top: -20px;
+        margin-bottom: 70px;
+    }
+    .contact{
+        height: 680px;
+    }
+    .row-contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    section{
+        height: 630px;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        margin-left: -25px;
+    }
+    .container-home {
+      flex-direction: column;
+    }
+    .img-me{
+        width: 300px;
+        height: 300px;
+    }
+    .left-home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .right-home{
+        margin-top: 37px;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    hr{
+        width: 400px;
+        margin: auto;
+    }
+
+    .container-about-me{
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+        height: 500px;
+    }
+    .img-me-2{
+        display: none;
+    }
+    .left-about-me{
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        margin-bottom: -5px;
+        font-size: 35px;
+    }
+    .about-me-text{
+        font-size: 18px;
+        margin: 20px;
+    }
+    #About-me{
+        height: 600px;
+    }
+    .right-about-me{
+        display: none;
+    }
+    br{
+        display: none;
+    }
+    .container-skills{
+        margin: 0;
+        padding: 0;
+    }
+    .card-skills{
+        width: 160px;
+        height: 240px;
+        font-size: 15px;
+    }
+    .card-img-top{
+        width: 50px;
+        height: 50px;
+    }
+    .card-text{
+        font-size: 9px;
+    }
+    #skills{
+        height: 630px;
+        margin: 0;
+        padding: 0;
+    }
+    .my-skills-text{
+        margin: 10px auto;
+        margin-top: -70px;
+        margin-bottom: 15px;
+    }
+    .row-skills{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .card-skills:hover{
+        width: 160px;
+        height: 240px;
+    }
+    .col-6 {
+        max-width: calc(50% - 15px); 
+        padding: 10px;
+    }
+    .card{
+        height: 185px;
+        width: 155px;
+    }
+    .card span{
+        font-size: 12px;
+    }
+    .section-title{
+        margin: auto;
+        margin-top: -20px;
+        margin-bottom: 70px;
+    }
+    .contact{
+        height: 680px;
+    }
+    .row-contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -50px;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    section{
+        height: 620px;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        margin-left: -25px;
+    }
+    .container-home {
+      flex-direction: column;
+    }
+    .img-me{
+        width: 300px;
+        height: 300px;
+    }
+    .left-home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .right-home{
+        margin-top: 37px;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    hr{
+        width: 400px;
+        margin: auto;
+    }
+
+    .container-about-me{
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+        height: 500px;
+    }
+    .img-me-2{
+        display: none;
+    }
+    .left-about-me{
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        margin-bottom: -5px;
+        font-size: 35px;
+    }
+    .about-me-text{
+        font-size: 18px;
+        margin: 20px;
+    }
+    .right-about-me{
+        display: none;
+    }
+    br{
+        display: none;
+    }
+    .container-skills{
+        margin: 0;
+        padding: 0;
+    }
+    .card-skills{
+        width: 150px;
+        height: 240px;
+        font-size: 15px;
+    }
+    .card-img-top{
+        width: 50px;
+        height: 50px;
+    }
+    .card-text{
+        font-size: 10px;
+    }
+    #skills{
+        height: 630px;
+        margin: 0;
+        padding: 0;
+    }
+    .my-skills-text{
+        margin: 10px auto;
+        margin-top: -70px;
+        margin-bottom: 15px;
+    }
+    .row-skills{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .card-skills:hover{
+        width: 150px;
+        height: 240px;
+    }
+    .col-6 {
+        max-width: calc(50% - 15px); 
+        padding: 10px;
+    }
+    .card{
+        height: 185px;
+        width: 155px;
+    }
+    .card span{
+        font-size: 12px;
+    }
+    .section-title{
+        margin: auto;
+        margin-top: -20px;
+        margin-bottom: 70px;
+    }
+    .contact{
+        height: 670px;
+    }
+    .row-contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -60px;
+        margin-top: 0;
+    }
+}
