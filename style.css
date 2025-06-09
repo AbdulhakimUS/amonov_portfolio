@@ -21,6 +21,7 @@ body {
 
 
 
+
 /* navbar */
 nav {
     background-color: rgb(9, 86, 168);
@@ -71,13 +72,19 @@ nav {
     font-size: 30px;
 }
 
-
+.container-fluid{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 /* home */
 .container-home{
-    margin-top: 150px;
+    margin: 150px auto;
     display: flex;
     justify-content: space-around;
+    max-width: 1440px;
+    width: 100%;
 }
 
 hr{
@@ -116,6 +123,9 @@ hr{
 
 /* about-me */
 
+#About-me{
+    background-color: rgb(11, 108, 211);
+}
 .about{
     text-align: center;
     align-items: center;
@@ -125,11 +135,12 @@ hr{
 }
 
 .container-about-me{
-    margin-top: 100px;
     display: flex;
-    background-color: rgb(11, 108, 211);
     height: 630px;
     justify-content: space-around;
+    max-width: 1440px;
+    width: 100%;
+    margin: 100px auto;
 }
 
 
@@ -163,11 +174,13 @@ hr{
 /* skills */
 
 .container-skills{
-    margin: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 550px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 50px auto;
 }
 
 .my-skills-text{
@@ -239,6 +252,11 @@ h5{
     height: 630px;
 }
 
+.content{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
 .contact .content{
     display: flex;
     justify-content: center;
