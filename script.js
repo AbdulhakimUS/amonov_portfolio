@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
 
 // dark mode
 var darkModeToggle = document.getElementById("darkModeToggle");
-let bobElements = document.querySelectorAll('.contact, .container-about-me');
+let bobElements = document.querySelectorAll('.contact, #About-me');
 let CardTransformation = document.querySelectorAll('.card-skills');
 
 
