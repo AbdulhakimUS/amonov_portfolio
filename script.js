@@ -24,20 +24,23 @@ if (localStorage.getItem("darkMode") === "enabled") {
 }
 
 
-darkModeToggle.addEventListener("click", function() {
+if (darkModeToggle) {
+  darkModeToggle.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
-    bobElements.forEach(el => el.classList.toggle('dark-blue-mode'));
-    
-    CardTransformation.forEach(el => el.classList.toggle('dark-card-skills')); // Исправлено!
+
+    bobElements?.forEach(el => el.classList.toggle('dark-blue-mode'));
+    CardTransformation?.forEach(el => el.classList.toggle('dark-card-skills'));
 
     if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("darkMode", "enabled");
-        darkModeToggle.textContent = "☀️";
+      localStorage.setItem("darkMode", "enabled");
+      darkModeToggle.textContent = "☀️";
     } else {
-        localStorage.setItem("darkMode", "disabled");
-        darkModeToggle.textContent = "🌙";
+      localStorage.setItem("darkMode", "disabled");
+      darkModeToggle.textContent = "🌙";
     }
-});
+  });
+}
+
 
 window.addEventListener("scroll", function () {
   var scrollTop = window.scrollY; // Текущая прокрутка
