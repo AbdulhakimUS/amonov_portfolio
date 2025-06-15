@@ -9,37 +9,51 @@ window.addEventListener("load", function () {
 });
 
 // dark mode
-var darkModeToggle = document.getElementById("darkModeToggle");
-let bobElements = document.querySelectorAll('.contact, #About-me');
-let CardTransformation = document.querySelectorAll('.card-skills');
+
+document.addEventListener("DOMContentLoaded", function () {
+  let darkModeToggle = document.getElementById("darkModeToggle");
+  let bobElements = document.querySelectorAll('.contact, #About-me');
+  let CardTransformation = document.querySelectorAll('.card-skills');
+  let projectSection = document.querySelector('.projects');
+  let projectCards = document.querySelectorAll('.projects .card');
 
 
-if (localStorage.getItem("darkMode") === "enabled") {
+
+  if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
     bobElements.forEach(el => el.classList.add('dark-blue-mode'));
+    CardTransformation.forEach(el => el.classList.add('dark-card-skills'));
 
-    CardTransformation.forEach(el => el.classList.add('dark-card-skills')); // Исправлено!
-    
+    // 🔥 Новое:
+    projectSection?.classList.add('dark-projects');
+    projectCards?.forEach(el => el.classList.add('dark-project-card'));
+
     darkModeToggle.textContent = "☀️";
-}
+  }
+
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      bobElements?.forEach(el => el.classList.toggle('dark-blue-mode'));
+      CardTransformation?.forEach(el => el.classList.toggle('dark-card-skills'));
+
+      // 🔥 Новое:
+      projectSection?.classList.toggle('dark-projects');
+      projectCards?.forEach(el => el.classList.toggle('dark-project-card'));
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeToggle.textContent = "☀️";
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeToggle.textContent = "🌙";
+      }
+    });
+  }
+});
 
 
-if (darkModeToggle) {
-  darkModeToggle.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
 
-    bobElements?.forEach(el => el.classList.toggle('dark-blue-mode'));
-    CardTransformation?.forEach(el => el.classList.toggle('dark-card-skills'));
-
-    if (document.body.classList.contains("dark-mode")) {
-      localStorage.setItem("darkMode", "enabled");
-      darkModeToggle.textContent = "☀️";
-    } else {
-      localStorage.setItem("darkMode", "disabled");
-      darkModeToggle.textContent = "🌙";
-    }
-  });
-}
 
 
 window.addEventListener("scroll", function () {
@@ -49,11 +63,11 @@ window.addEventListener("scroll", function () {
   var darkModeToggle = document.getElementById("darkModeToggle");
 
   if (scrollTop + windowHeight >= documentHeight - 10) { // Если достигли конца страницы
-      darkModeToggle.classList.add("show");
-      darkModeToggle.classList.remove("hide");
+    darkModeToggle.classList.add("show");
+    darkModeToggle.classList.remove("hide");
   } else {
-      darkModeToggle.classList.add("hide");
-      setTimeout(() => darkModeToggle.classList.remove("show"), 300); // Убираем show после анимации
+    darkModeToggle.classList.add("hide");
+    setTimeout(() => darkModeToggle.classList.remove("show"), 300); // Убираем show после анимации
   }
 });
 
@@ -63,19 +77,19 @@ window.addEventListener("scroll", function () {
 var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 // Show button when user scrolls down
-window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollToTopBtn.classList.add("show");
-        scrollToTopBtn.classList.remove("hide");
-    } else {
-        scrollToTopBtn.classList.add("hide");
-        setTimeout(() => scrollToTopBtn.classList.remove("show"), 300); // Hide after fade-out
-    }
-};  
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    scrollToTopBtn.classList.add("show");
+    scrollToTopBtn.classList.remove("hide");
+  } else {
+    scrollToTopBtn.classList.add("hide");
+    setTimeout(() => scrollToTopBtn.classList.remove("show"), 300); // Hide after fade-out
+  }
+};
 
 // Scroll to top function
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
@@ -86,9 +100,9 @@ const dropDownMenu = document.querySelector('.Dropdown-menu');
 let isOpen = false;
 
 toggleBtn.addEventListener('click', () => {
-    dropDownMenu.style.display = isOpen ? 'none' : 'block';
-    toggleBtnIcon.className = isOpen
-      ? 'fa-solid fa-bars'
-      : 'fa-solid fa-xmark';
-    isOpen = !isOpen;
-  });
+  dropDownMenu.style.display = isOpen ? 'none' : 'block';
+  toggleBtnIcon.className = isOpen
+    ? 'fa-solid fa-bars'
+    : 'fa-solid fa-xmark';
+  isOpen = !isOpen;
+});
